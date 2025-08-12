@@ -4,12 +4,14 @@ pipeline{
         stage('Build'){
             steps{
                 echo 'Building...'
+                git 'https://github.com/neversettel582/IIHT_CI-CD_Assignment.git'
             }
 
         }
         stage('Testing'){
             steps{
                 echo 'Testing...'
+                bat 'my_script.bat'
             }
         }
         stage('Deploy'){
